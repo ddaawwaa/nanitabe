@@ -1,8 +1,9 @@
 class CategorysController < ApplicationController
-def index
-end
+  def index
+  end
 
-def show
-end
+  def random
+    @categorys = Category.order("RANDOM()").first(4)
+  end
 
 end

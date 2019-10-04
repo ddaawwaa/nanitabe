@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'categorys#index'
 
-  resources :categorys, only: [:index, :show]
+  get "/" => 'categorys#index'
+  get "/random" => 'categorys#random'
 end
