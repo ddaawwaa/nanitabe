@@ -6,4 +6,7 @@ class CategorysController < ApplicationController
     @categorys = Category.order("RANDOM()").first(4)
   end
 
+  def search
+  end
+
 end
