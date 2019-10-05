@@ -10,7 +10,7 @@ require 'net/https'
 require "uri"
 require "active_support/core_ext"
 
-keyid = GRN_ACCESS_KEY
+keyid = ENV["GRN_ACCESS_KEY"]
 
 data={"keyid": keyid,
       "lang": "ja"
