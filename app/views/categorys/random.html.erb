@@ -1,7 +1,12 @@
 
 <div class="container">
   <div class="">
-    <%= render partial: 'category', collection: @categorys, locals: {category: @category} %>
+    <%= form_for @categorys, url: search_path, html: {method: "POST"} do |f| %>
+      <%= f.collection_radio_buttons(:name, @categorys, :code, :name) %>
+      <label for="station">現在地：</label>
+      <%= text_field_tag "station", "", {placeholder: "例）新宿駅"} %>
+      <%= f.submit '検索' %>
+    <% end %>
   </div>
-  <a href="/random" class="btn btn-outline-success">もう一度</a>
+  <a href="/random" class="btn btn-outline-success">retry</a>
 </div>

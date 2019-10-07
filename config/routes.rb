@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get "/" => 'categorys#index'
   get "/random" => 'categorys#random'
+  post "/search" => 'categorys#search'
+  get "/result" => 'choices#result'
 end
