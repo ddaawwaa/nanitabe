@@ -10,13 +10,15 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class='text-success '>
-        <div class="">ナニタベ？</div>
-        <div class="">もう、「なんでもいい」とは言わないで</div>
+    <div class="container-fluid h-100 bg-success">
+      <header class="text-center align-items-center row d-flex justify-content-between p-3 ">
+        <h3 class="text-white">ナニタベ？</h3>
+        <nav class="">
+          <a href="/" class="p-2 text-light">ホーム</a>
+          <a href="/random" class="p-2 text-light">検索</a>
+        </nav>
       </header>
     </div>
-    <hr>
     <%= yield %>
   </body>
 </html>
