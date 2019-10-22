@@ -1,7 +1,7 @@
 <div class="p-5 bg-light">
   <div class="container">
     <div class="form-group row justify-content-center">
-      <%= form_for @categorys, url: search_path, html: {method: "POST"} do |f| %>
+      <%= form_for @categorys, url: search_path, html: {method: "GET"} do |f| %>
         <div class="bg-white p-3 mb-4 col-12">
           <h4>１．どのジャンルにする？</h4>
             <div class="mx-2 pb-2">
