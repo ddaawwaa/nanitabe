@@ -1,5 +1,6 @@
-<% @results.each_with_index do |result, i| %>
-  <%= i + 1 %>
-  <%= result["name"] %>
-  <%= result["access"]["station"] %>
-<% end %>
+<div class="p-5 bg-light">
+  <div class="container">
+    <%= render partial: "result", collection: @results %>
+
+  </div>
+</div>

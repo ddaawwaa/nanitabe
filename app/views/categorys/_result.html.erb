@@ -1,0 +1,30 @@
+<div class="card my-4 d-flex">
+  <img src=<%= result["image_url"]["shop_image1"] %> alt="no image" class="card-img-top h-50 w-50 d-block mx-auto">
+  <div class="card-body">
+    <h4 class="card-title"><%= result["name"] %></h4>
+    <h6 class="card-subtitle"><%= result["pr"]["pr_short"] %></h6>
+    <table class="table table-sm m-3">
+      <tr>
+        <th class="text-nowrap">住所</th>
+        <td class=""><%= result["address"] %></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap">電話番号</th>
+        <td class=""><%= result["tel"] %></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap">営業時間</th>
+        <td class=""><%= result["opentime"] %></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap">休日</th>
+        <td class=""><%= result["holiday"] %></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap">アクセス</th>
+        <td class=""><%= result["access"]["line"] + result["access"]["station"] + result["access"]["station_exit"] %> 徒歩 <%= result["access"]["walk"] %> 分 </td>
+      </tr>
+    </table>
+    <%= link_to "詳細（ぐるなびへ）", "#{result["url"]}", class: "btn btn-success btn-block" %>
+  </div>
+</div>
