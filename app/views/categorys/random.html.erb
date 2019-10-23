@@ -7,7 +7,7 @@
             <div class="mx-2 pb-2">
               <%= f.collection_radio_buttons(:name, @categorys, :code, :name,) do |r|  %>
                 <div class="form-check">
-                  <%= r.label(class: "form-check-label") {r.radio_button(class: "form-check-input") + r.text} %>
+                  <%= r.label(class: "form-check-label") {r.radio_button(class: "form-check-input", required: true) + r.text} %>
                 </div>
               <% end %>
             </div>
@@ -16,7 +16,7 @@
 
         <div class="bg-white p-3 mb-4 col-12">
           <h4>２．現在地は？</h4>  
-          <%= text_field_tag "station", "", {placeholder: "（例）新宿駅", class: "form-control readonly"} %>
+          <%= text_field_tag "station", "", {placeholder: "（例）新宿駅", class: "form-control readonly", required: true } %>
         </div>
         <%= f.submit '検索', class: "btn-lg btn-success col-12" %>
       <% end %>
